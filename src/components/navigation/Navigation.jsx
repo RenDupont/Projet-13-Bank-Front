@@ -3,17 +3,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Navigations() {
     return (
-        <nav class={Classes.mainNav}>
-            <a class={Classes.mainNavLogo} href="./index.html">
+        <nav className={Classes.mainNav}>
+            <a className={Classes.mainNavLogo} href="./index.html">
                 <img
-                class={Classes.mainNavLogoImage}
+                className={Classes.mainNavLogoImage}
                 src="./img/argentBankLogo.png"
                 alt="Argent Bank Logo"
                 />
-                <h1 class={Classes.srOnly}>Argent Bank</h1>
+                <h1 className={Classes.srOnly}>Argent Bank</h1>
             </a>
             <div>
-                <a class={Classes.mainNavItem} href="./sign-in.html">
+                <a className={Classes.mainNavItem} href="./sign-in.html">
                 <FontAwesomeIcon icon="fas fa-user-circle" />
                 Sign In
                 </a>
