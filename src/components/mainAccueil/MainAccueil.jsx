@@ -1,4 +1,7 @@
 import Classes from './MainAccueil.module.css';
+import iconChat from '../../assets/icon-chat.png';
+import iconMoney from '../../assets/icon-money.png';
+import iconSecurity from '../../assets/icon-security.png';
 
 function MainAccueil() {
     return (
@@ -15,7 +18,7 @@ function MainAccueil() {
             <section className={Classes.features}>
                 <h2 className={Classes.srOnly}>Features</h2>
                 <div className={Classes.featureItem}>
-                    <img src="../../assets/icon-chat.png" alt="Chat Icon" className={Classes.featureIcon} />
+                    <img src={iconChat} alt="Chat Icon" className={Classes.featureIcon} />
                     <h3 className={Classes.featureItemTitle}>You are our #1 priority</h3>
                     <p>
                         Need to talk to a representative? You can get in touch through our
@@ -24,7 +27,7 @@ function MainAccueil() {
                 </div>
                 <div className={Classes.featureItem}>
                     <img
-                        src="../../assets/icon-money.png"
+                        src={iconMoney}
                         alt="Chat Icon"
                         className={Classes.featureIcon}
                     />
@@ -35,7 +38,7 @@ function MainAccueil() {
                 </div>
                 <div className={Classes.featureItem}>
                     <img
-                        src="../../assets/icon-security.png"
+                        src={iconSecurity}
                         alt="Chat Icon"
                         className={Classes.featureIcon}
                     />
