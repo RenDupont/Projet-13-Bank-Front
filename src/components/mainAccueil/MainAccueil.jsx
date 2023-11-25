@@ -15,7 +15,7 @@ function MainAccueil() {
             <section className={Classes.features}>
                 <h2 className={Classes.srOnly}>Features</h2>
                 <div className={Classes.featureItem}>
-                    <img src="./img/icon-chat.png" alt="Chat Icon" className={Classes.featureIcon} />
+                    <img src="../../assets/icon-chat.png" alt="Chat Icon" className={Classes.featureIcon} />
                     <h3 className={Classes.featureItemTitle}>You are our #1 priority</h3>
                     <p>
                         Need to talk to a representative? You can get in touch through our
@@ -24,7 +24,7 @@ function MainAccueil() {
                 </div>
                 <div className={Classes.featureItem}>
                     <img
-                        src="./img/icon-money.png"
+                        src="../../assets/icon-money.png"
                         alt="Chat Icon"
                         className={Classes.featureIcon}
                     />
@@ -35,7 +35,7 @@ function MainAccueil() {
                 </div>
                 <div className={Classes.featureItem}>
                     <img
-                        src="./img/icon-security.png"
+                        src="../../assets/icon-security.png"
                         alt="Chat Icon"
                         className={Classes.featureIcon}
                     />

@@ -7,15 +7,15 @@ function Navigations() {
             <a className={Classes.mainNavLogo} href="./index.html">
                 <img
                 className={Classes.mainNavLogoImage}
-                src="./img/argentBankLogo.png"
+                src="../../assets/argentBankLogo.png"
                 alt="Argent Bank Logo"
                 />
                 <h1 className={Classes.srOnly}>Argent Bank</h1>
             </a>
             <div>
-                <a className={Classes.mainNavItem} href="./sign-in.html">
-                <FontAwesomeIcon icon="fas fa-user-circle" />
-                Sign In
+                <a className={Classes.mainNavItem} href="#">
+                    <FontAwesomeIcon icon="fas fa-user-circle" />
+                    Sign In
                 </a>
             </div>
         </nav>
