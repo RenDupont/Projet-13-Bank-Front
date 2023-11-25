@@ -2,23 +2,24 @@ import Classes from './Navigation.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import logo from '../../assets/argentBankLogo.png';
+import { Link } from "react-router-dom";
 
 function Navigations() {
     return (
         <nav className={Classes.mainNav}>
-            <a className={Classes.mainNavLogo} href="./index.html">
+            <Link className={Classes.mainNavLogo} to={'/'}>
                 <img
                 className={Classes.mainNavLogoImage}
                 src={logo}
                 alt="Argent Bank Logo"
                 />
                 <h1 className={Classes.srOnly}>Argent Bank</h1>
-            </a>
+            </Link>
             <div>
-                <a className={Classes.mainNavItem} href="#">
+                <Link className={Classes.mainNavItem} to={'/sign-in'}>
                     <FontAwesomeIcon icon={faUserCircle} />
                     Sign In
-                </a>
+                </Link>
             </div>
         </nav>
     );
