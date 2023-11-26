@@ -4,6 +4,8 @@ import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import logo from '../../assets/argentBankLogo.png';
 import { Link } from "react-router-dom";
 
+
+
 function Navigations() {
     return (
         <nav className={Classes.mainNav}>
@@ -15,6 +17,16 @@ function Navigations() {
                 />
                 <h1 className={Classes.srOnly}>Argent Bank</h1>
             </Link>
+            <div>
+                <Link className={Classes.mainNavItem} to={'/user'}>
+                    <FontAwesomeIcon icon={faUserCircle} /> 
+                    Tony
+                </Link>
+                <Link className={Classes.mainNavItem} to={'/'}>
+                    <FontAwesomeIcon icon={faUserCircle} />
+                    Sign Out
+                </Link>
+            </div>
             <div>
                 <Link className={Classes.mainNavItem} to={'/sign-in'}>
                     <FontAwesomeIcon icon={faUserCircle} />
