@@ -1,6 +1,7 @@
 import Classes from './MainSignIn.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 function MainSignIn() {
     return (
@@ -21,7 +22,9 @@ function MainSignIn() {
                         <input type="checkbox" id="remember-me" />
                         <label htmlFor="remember-me">Remember me</label>
                     </div>
-                    <button className={Classes.signInButton}>Sign In</button>
+                    <Link to={'/user'}>
+                        <button className={Classes.signInButton}>Sign In</button>
+                    </Link>
                 </form>
             </section>
         </main>
