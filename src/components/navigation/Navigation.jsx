@@ -3,19 +3,21 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import logo from '../../assets/argentBankLogo.png';
 import { Link, useLocation } from "react-router-dom";
+import { useSelector } from 'react-redux';
 
 
 
 function Navigations() {
 
     const location = useLocation();
+    const profile = useSelector(state => state.firstName);
 
     const renderContent = () => {
         if (location.pathname === '/user') {
             return (
                 <div>
                     <Link className={Classes.mainNavItem} to={'/user'}>
-                        <FontAwesomeIcon icon={faUserCircle} /> Tony
+                        <FontAwesomeIcon icon={faUserCircle} /> {profile}
                     </Link>
                     <Link className={Classes.mainNavItem} to={'/'}>
                         <FontAwesomeIcon icon={faUserCircle} /> Sign Out

@@ -28,13 +28,17 @@ export const userProfile = async (token) => {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
+            accept: 'application/json',
+            'Authorization': `Bearer ${token}` 
           },
-          body: JSON.stringify(token),
+          body: "",
         });
 
         console.log('response:', response);
         
         const data = await response.json();
+
+        console.log(data);
   
         return data.body;
   } catch (error) {
