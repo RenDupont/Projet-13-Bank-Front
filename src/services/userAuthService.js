@@ -75,3 +75,29 @@ export const updateUserProfile = async (token, updatedProfile) => {
     throw error;
   }
 };
+
+export const CreateUser = async (newUser) => {
+  try {
+      const response = await fetch('http://localhost:3001/api/v1/user/signup', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            accept: 'application/json', 
+          },
+          body: JSON.stringify(newUser),
+        });
+
+        console.log('response:', response);
+        
+        const data = await response.json();
+
+        console.log(data);
+  
+        //return data.body;
+  } catch (error) {
+
+    console.error('Erreur lors de la creation du profile de l\'utilisateur', error);
+    
+    throw error;
+  }
+};

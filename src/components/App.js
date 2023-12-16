@@ -17,7 +17,7 @@ function App() {
                 <Route path='/sign-in' element={<SignIn />} />
                 <Route path='/user' element={<User />} />
                 <Route path='/api-docs' element={<SwaggerDocs />} />
-                <Route path='/SignUp' element={<SignUp />} />
+                <Route path='/sign-up' element={<SignUp />} />
             </Routes>
             <Footer />
         </div>

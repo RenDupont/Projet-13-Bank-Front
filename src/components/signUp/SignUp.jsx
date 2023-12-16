@@ -2,6 +2,8 @@ import Classes from './SignUp.module.css';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import { CreateUser } from '../../services/userAuthService';
+import { useNavigate } from 'react-router-dom';
 
 function SignUp() {
 
@@ -9,10 +11,18 @@ function SignUp() {
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
-    const handleSignUp = (e) => {
+    const handleSignUp = async  (e) => {
         e.preventDefault();
+        const newUser = {email: email, password: password, firstName: firstName, lastName: lastName};
         
+        try {
+            await CreateUser(newUser);
+            navigate(`/sign-in`);   
+        } catch (error) {
+            console.error('Une erreur s\'est produite lors de la création de l\'utilisateur:', error);
+        }
     };
 
     return (

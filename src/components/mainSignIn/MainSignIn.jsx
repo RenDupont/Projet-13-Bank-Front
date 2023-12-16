@@ -47,7 +47,7 @@ function MainSignIn() {
                         <input type="checkbox" id="remember-me" />
                         <label htmlFor="remember-me">Remember me</label>
                     </div>
-                    <Link to={'/SignUp'}>New account ?</Link>
+                    <Link to={`/sign-up`}>New account ?</Link>
                     <button type="submit" className={Classes.signInButton}>Sign In</button>
                 </form>
             </section>
