@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { loginUser } from '../../services/userAuthService';
 import { login } from '../../store/actions';
+import { Link } from 'react-router-dom';
 
 function MainSignIn() {
     const [username, setUsername] = useState('');
@@ -46,6 +47,7 @@ function MainSignIn() {
                         <input type="checkbox" id="remember-me" />
                         <label htmlFor="remember-me">Remember me</label>
                     </div>
+                    <Link to={'/SignUp'}>New account ?</Link>
                     <button type="submit" className={Classes.signInButton}>Sign In</button>
                 </form>
             </section>

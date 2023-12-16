@@ -1,0 +1,92 @@
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: "Argent Bank - API Transactions"
+  description: "API documentation for transaction-related operations."
+host: localhost:3000
+basePath: /api/v1
+schemes:
+  - http
+paths:
+  /transactions:
+    get:
+      summary: "Get all transactions for the current month, grouped by account."
+      description: "Retrieve a list of transactions for the authenticated user, grouped by account for the current month."
+      parameters:
+        - in: query
+          name: month
+          description: "The month for which transactions should be retrieved (format: YYYY-MM)."
+          required: true
+          type: string
+        - in: query
+          name: accountId
+          description: "Filter transactions by account ID (optional)."
+          required: false
+          type: integer
+      responses:
+        200:
+          description: "List of transactions retrieved successfully."
+        401:
+          description: "Unauthorized - User not authenticated."
+
+  /transactions/{transactionId}:
+    get:
+      summary: "Get details of a specific transaction."
+      description: "Retrieve detailed information about a specific transaction."
+      parameters:
+        - in: path
+          name: transactionId
+          description: "ID of the transaction to retrieve."
+          required: true
+          type: integer
+      responses:
+        200:
+          description: "Transaction details retrieved successfully."
+        404:
+          description: "Transaction not found."
+
+    post:
+      summary: "Add a new transaction."
+      description: "Add a new transaction for the authenticated user."
+      parameters:
+        - in: header
+          name: Authorization
+          description: "Attach Bearer JWT token"
+          required: true
+        - in: body
+          name: transaction
+          description: "Transaction details to add."
+          required: true
+          schema:
+            $ref: '#/definitions/Transaction'
+      responses:
+        201:
+          description: "Transaction added successfully."
+        400:
+          description: "Bad Request - Invalid input data."
+        401:
+          description: "Unauthorized - User not authenticated."
+
+    put:
+      summary: "Update an existing transaction."
+      description: "Update details of an existing transaction."
+      parameters:
+        - in: header
+          name: Authorization
+          description: "Attach Bearer JWT token"
+          required: true
+        - in: path
+          name: transactionId
+          description: "ID of the transaction to update."
+          required: true
+          type: integer
+        - in: body
+          name: transaction
+          description: "New transaction details."
+          required: true
+          schema:
+            $ref: '#/definitions/Transaction'
+      responses:
+        200:
+          description: "Transaction updated successfully."
+        404:
