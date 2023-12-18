@@ -1,6 +1,10 @@
 
 .main {
     flex: 1;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    align-items: center;
 }
 
 .bgDark {
@@ -24,8 +28,8 @@
     background-color: white;
     width: 300px;
     margin: 0 auto;
-    margin-top: 3rem;
     padding: 2rem;
+    max-height: 450px;
   }
   
   .signInIcon {

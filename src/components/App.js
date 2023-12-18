@@ -1,4 +1,4 @@
-import './App.css';
+import Classes from './App.module.css';
 import {Routes, Route} from "react-router-dom";
 import Accueil from './accueil/Accueil';
 import SignIn from './signIn/SignIn';
@@ -10,7 +10,7 @@ import SignUp from './signUp/SignUp';
 
 function App() {
     return (
-        <div>
+        <div className={Classes.app}>
             <Navigations />
             <Routes>
                 <Route path='/' element={<Accueil />} />
