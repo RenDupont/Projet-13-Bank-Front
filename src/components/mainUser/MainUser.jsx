@@ -64,18 +64,18 @@ function MainSignIn() {
             return (
                 <div className={Classes.header}>
                     <h1>Welcome back</h1>
-                    <form onSubmit={handleEditName}>
-                        <div>
+                    <form className={Classes.editNameForm} onSubmit={handleEditName}>
+                        <div className={Classes.editNameInputDiv}>
                             <div>
-                                <input type="text" id="firstName" defaultValue={profile?.firstName} />
+                                <input className={Classes.editNameInput} type="text" id="firstName" defaultValue={profile?.firstName} />
                             </div>
                             <div>
-                                <input type="text" id="lastName" defaultValue={profile?.lastName} />
+                                <input className={Classes.editNameInput} type="text" id="lastName" defaultValue={profile?.lastName} />
                             </div>
                         </div>
-                        <div>
-                            <button type="submit">Save</button>
-                            <button type="button" onClick={hideEdit}>Cancel</button>
+                        <div className={Classes.editNameInputDiv}>
+                            <button className={Classes.editNameButton} type="submit">Save</button>
+                            <button className={Classes.editNameButton} type="button" onClick={hideEdit}>Cancel</button>
                         </div>
                     </form>
                 </div>
