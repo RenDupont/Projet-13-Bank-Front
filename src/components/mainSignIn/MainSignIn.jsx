@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 function MainSignIn() {
     const [username, setUsername] = useState('');
-    const [password, setPassword] = useState();
+    const [password, setPassword] = useState('');
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
