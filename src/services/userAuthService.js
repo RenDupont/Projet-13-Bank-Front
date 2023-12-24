@@ -9,8 +9,6 @@ export const loginUser = async (userData) => {
             body: JSON.stringify(userData),
           });
 
-          console.log('response:', response);
-
           const data = await response.json();
     
           return data.body;
@@ -33,12 +31,8 @@ export const userProfile = async (token) => {
           },
           body: "",
         });
-
-        console.log('response:', response);
         
         const data = await response.json();
-
-        console.log(data);
   
         return data.body;
   } catch (error) {
@@ -60,14 +54,11 @@ export const updateUserProfile = async (token, updatedProfile) => {
           },
           body: JSON.stringify(updatedProfile),
         });
-
-        console.log('response:', response);
         
         const data = await response.json();
 
         console.log(data);
   
-        //return data.body;
   } catch (error) {
 
     console.error('Erreur lors de la reception du profile de l\'utilisateur', error);
@@ -86,14 +77,11 @@ export const CreateUser = async (newUser) => {
           },
           body: JSON.stringify(newUser),
         });
-
-        console.log('response:', response);
         
         const data = await response.json();
 
         console.log(data);
   
-        //return data.body;
   } catch (error) {
 
     console.error('Erreur lors de la creation du profile de l\'utilisateur', error);
