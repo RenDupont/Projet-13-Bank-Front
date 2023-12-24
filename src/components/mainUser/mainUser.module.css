@@ -96,12 +96,23 @@
   }
 
   .editNameInput {
-    height: 25px;
+    height: 30px;
+    border: 2px solid gray;
+    border-radius: 4px;
+    width: 190px;
+    color: gray;
+    font-weight: bold;
+    padding-left: 10px;
   }
 
   .editNameButton {
     height: 25px;
     width: 100px;
+    color: #12002b;
+    font-weight: bold;
+    font-size: 0.8rem;
+    border: 1px solid #12002b;
+    border-radius: 4px;
   }
 
   @media (min-width: 720px) {
